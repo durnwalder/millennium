@@ -1,0 +1,22 @@
+<header>
+  <div class="masthead">
+    <div class="foto-streifen" aria-hidden="true">
+      {% for photo in config.extra.header_images %}
+        {% if loop.index > 3 %}{% break %}{% endif %}
+        {% set thumb = resize_image(path=photo.src, width=320, height=160, op="fill", format="jpg", quality=75) %}
+        <img src="{{ thumb.url }}" width="{{ thumb.width }}" height="{{ thumb.height }}" alt="">
+      {% endfor %}
+    </div>
+    <a class="wortmarke" href="{{ get_url(path='') }}" aria-label="{{ config.title }} – Home"><span class="marke"><b>{{ config.extra.brand_first }}</b><strong>{{ config.extra.brand_second }}</strong></span><span class="unterzeile">{{ config.extra.tagline }}</span></a>
+    <div class="farbstreifen"></div>
+    <div class="graustreifen"></div>
+  </div>
+  <p class="kopfzeile">{{ config.extra.strapline }}</p>
+  <nav class="nav" aria-label="Main navigation">
+    {% for item in config.extra.navigation %}
+      {% set item_path = '/' ~ item.path %}
+      <a href="{{ get_url(path=item.path) }}"{% if current_path is defined and (current_path == item_path or (item.path != '' and current_path is starting_with(pat=item_path))) %} aria-current="page"{% endif %}>{{ item.label }}</a>
+    {% endfor %}
+  </nav>
+  <div class="graubalken"></div>
+</header>

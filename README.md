@@ -1,0 +1,1 @@
+Millennium is a small early-2000s-style Zola theme for a personal site, blog and photos. No JavaScript. Edit `zola.toml` and `content/`, run `zola serve` to preview or `zola build` to build. Needs Zola 0.23.6 or newer.

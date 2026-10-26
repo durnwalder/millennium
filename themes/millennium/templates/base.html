@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ config.default_language }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+  <link rel="stylesheet" href="{{ get_url(path='millennium.css') }}">
+  <link rel="icon" href="{{ get_url(path='millennium.svg') }}" type="image/svg+xml">
+  {% set blog = get_section(path=config.extra.blog_section) %}
+  <link rel="alternate" type="application/atom+xml" title="{{ blog.title }}" href="{{ blog.permalink }}atom.xml">
+</head>
+<body>
+  <a class="springen" href="#inhalt">Skip to content</a>
+  <div class="seite">
+    {% block header %}{% include "partials/header.html" %}{% endblock header %}
+    <div class="zweispaltig">
+      <main id="inhalt" class="prose">{% block content %}{% endblock content %}</main>
+      <aside class="seitenleiste" aria-label="Sidebar">{% block sidebar %}{% include "partials/sidebar.html" %}{% endblock sidebar %}</aside>
+    </div>
+    {% block footer %}
+    <footer>
+      <nav class="fussleiste" aria-label="Footer navigation">
+        {% for item in config.extra.navigation %}<a href="{{ get_url(path=item.path) }}">{{ item.label }}</a>{% endfor %}
+        <a href="{{ blog.permalink }}atom.xml">RSS / Atom</a>
+      </nav>
+      <p class="fuss">{{ config.extra.footer }}</p>
+    </footer>
+    {% endblock footer %}
+  </div>
+</body>
+</html>

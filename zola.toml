@@ -1,0 +1,31 @@
+base_url = "https://example.com"
+title = "My Site"
+description = "Notes, photos and discoveries."
+default_language = "en"
+theme = "millennium"
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+
+[extra]
+brand_first = "My"
+brand_second = "Site"
+tagline = "Notes, photos and discoveries."
+strapline = "A small corner of the internet."
+footer = "A personal website."
+sidebar_title = "Noticeboard"
+sidebar_text = "Welcome to my site."
+header_images = []
+
+[[extra.navigation]]
+path = ""
+label = "Home"
+[[extra.navigation]]
+path = "blog/"
+label = "Blog"
+[[extra.navigation]]
+path = "photos/"
+label = "Photos"
+[[extra.navigation]]
+path = "about/"
+label = "About"

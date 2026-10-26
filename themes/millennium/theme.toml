@@ -1,0 +1,16 @@
+name = "Millennium"
+description = "A small, early-2000s-style Zola theme."
+min_version = "0.23.6"
+
+[extra]
+brand_first = "My"
+brand_second = "Site"
+tagline = "Notes, photos and discoveries."
+strapline = "A small corner of the internet."
+footer = "A personal website."
+sidebar_title = "Noticeboard"
+sidebar_text = "Welcome to my site."
+header_images = []
+blog_section = "blog/_index.md"
+gallery_section = "photos/_index.md"
+navigation = []

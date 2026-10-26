@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{ section.title }} · {{ config.title }}{% endblock title %}
+{% block content %}
+<h1>{{ section.title }}</h1>
+{{ section.content | safe }}
+{% for entry in section.pages %}
+<article class="notiz"><time datetime="{{ entry.date }}">{{ entry.date | date(format='%d %b %Y') }}</time><h2><a href="{{ entry.permalink }}">{{ entry.title }}</a></h2><p>{{ entry.description }}</p><a href="{{ entry.permalink }}">Read more »</a></article>
+{% endfor %}
+{% endblock content %}
