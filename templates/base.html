@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ config.title }}{% endblock title %}</title>
   <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
-  <link rel="stylesheet" href="{{ get_url(path='millennium.css') }}">
+  {# cachebust: the URL changes with the file, so a CDN cannot serve stale CSS. #}
+  <link rel="stylesheet" href="{{ get_url(path='millennium.css', cachebust=true) }}">
   <link rel="icon" href="{{ get_url(path='millennium.svg') }}" type="image/svg+xml">
   {% set blog = get_section(path=config.extra.blog_section) %}
   <link rel="alternate" type="application/atom+xml" title="{{ blog.title }}" href="{{ blog.permalink }}atom.xml">
