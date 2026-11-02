@@ -3,12 +3,14 @@
 {% block content %}
 <h1>{{ section.title }}</h1>
 {{ section.content | safe }}
+{% if blog.pages %}
 <h2 class="balken">Latest posts</h2>
 {% for entry in blog.pages %}
 {% if loop.index > 3 %}{% break %}{% endif %}
 <article class="notiz"><time datetime="{{ entry.date }}">{{ entry.date | date(format='%d %b %Y') }}</time><h3><a href="{{ entry.permalink }}">{{ entry.title }}</a></h3><p>{{ entry.description }}</p></article>
 {% endfor %}
 <p><a class="knopf" href="{{ blog.permalink }}">All posts</a></p>
+{% endif %}
 {% set gallery = get_section(path=config.extra.gallery_section) %}
 <h2 class="balken orange">Photo album</h2>
 <p>{{ gallery.description }}</p>
