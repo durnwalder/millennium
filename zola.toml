@@ -2,7 +2,6 @@ base_url = "https://example.com"
 title = "My Site"
 description = "Notes, photos and discoveries."
 default_language = "en"
-theme = "millennium"
 compile_sass = false
 build_search_index = false
 generate_feeds = false
@@ -16,6 +15,8 @@ footer = "A personal website."
 sidebar_title = "Noticeboard"
 sidebar_text = "Welcome to my site."
 header_images = []
+blog_section = "blog/_index.md"
+gallery_section = "photos/_index.md"
 
 [[extra.navigation]]
 path = ""
