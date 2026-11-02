@@ -1,5 +1,7 @@
+{% if config.extra.sidebar_text %}
 <h2 class="balken orange">{{ config.extra.sidebar_title }}</h2>
 <div class="relief"><p>{{ config.extra.sidebar_text }}</p></div>
+{% endif %}
 {% if blog.pages %}
 <h2 class="balken">Latest posts</h2>
 <ul class="linkliste">

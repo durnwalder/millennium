@@ -11,8 +11,4 @@
 {% endfor %}
 <p><a class="knopf" href="{{ blog.permalink }}">All posts</a></p>
 {% endif %}
-{% set gallery = get_section(path=config.extra.gallery_section) %}
-<h2 class="balken orange">Photo album</h2>
-<p>{{ gallery.description }}</p>
-<p><a href="{{ gallery.permalink }}">View photos »</a></p>
 {% endblock content %}
