@@ -1,5 +1,6 @@
 <h2 class="balken orange">{{ config.extra.sidebar_title }}</h2>
 <div class="relief"><p>{{ config.extra.sidebar_text }}</p></div>
+{% if blog.pages %}
 <h2 class="balken">Latest posts</h2>
 <ul class="linkliste">
   {% for entry in blog.pages %}
@@ -7,5 +8,6 @@
   <li><time datetime="{{ entry.date }}">{{ entry.date | date(format='%d %b %Y') }}</time><a href="{{ entry.permalink }}">{{ entry.title }}</a></li>
   {% endfor %}
 </ul>
+{% endif %}
 <h2 class="balken">Explore</h2>
 <ul class="pfeile">{% for item in config.extra.navigation %}<li><a href="{{ get_url(path=item.path) }}">{{ item.label }}</a></li>{% endfor %}</ul>
