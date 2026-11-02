@@ -10,7 +10,7 @@
     {% set thumb = resize_image(path=entry.extra.image, width=480, height=320, op="fill", format="jpg", quality=80) %}
     <img src="{{ thumb.url }}" width="{{ thumb.width }}" height="{{ thumb.height }}" alt="{{ entry.extra.alt }}" loading="lazy" decoding="async">
   {% else %}<span class="platzhalter">Your photo here</span>{% endif %}
-  </a><figcaption><a href="{{ entry.permalink }}">{{ entry.title }}</a><p>{{ entry.description }}</p></figcaption></figure>
+  </a><figcaption><a href="{{ entry.permalink }}">{{ entry.title }}</a>{% if entry.description %}<p>{{ entry.description }}</p>{% endif %}</figcaption></figure>
 {% endfor %}
 </div>
 {% endblock content %}
