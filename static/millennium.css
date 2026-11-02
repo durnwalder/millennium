@@ -20,7 +20,7 @@ h1 { margin: 0 0 .7em; font-size: 22px; text-transform: uppercase; letter-spacin
 h2 { font-size: 18px; margin: 1.4em 0 .5em; }
 h3 { font-size: 16px; margin: .2em 0 .5em; }
 p { margin: 0 0 1em; }
-.seite { width: var(--breite); max-width: 100%; background: #fff; border-right: 1px solid var(--linie); }
+.seite { width: var(--breite); max-width: 100%; min-height: 100vh; display: flex; flex-direction: column; background: #fff; border-right: 1px solid var(--linie); }
 .springen { position: absolute; left: -9999px; background: #fff; padding: .5em; }
 .springen:focus { left: 4px; top: 4px; z-index: 10; }
 .masthead { position: relative; height: 120px; margin: 0 1px 0 8px; border: 1px solid var(--orange-linie); border-bottom: 0; top: 5px; }
@@ -67,7 +67,7 @@ figcaption { font-size: 13px; margin-top: 6px; }
 figcaption p { margin: 5px 0 0; }
 .platzhalter { display: grid; place-items: center; min-height: 140px; padding: 1em; border: 1px dashed #969696; background: var(--blau-hell); color: #555; font-size: 13px; text-align: center; }
 .baustelle { margin: 0 0 14px; text-align: center; }
-.baustelle img { display: block; margin: 0 auto 10px; }
+.baustelle img { display: block; margin: 0 auto; }
 .grosses-foto img { display: block; width: 100%; }
 blockquote { margin: 1em 0; padding: 8px 14px; border-left: 3px solid var(--blau); background: var(--blau-hell); }
 blockquote p:last-child { margin-bottom: 0; }
@@ -75,6 +75,7 @@ pre { overflow: auto; padding: 10px; background: #eee; border: 1px solid var(--l
 table { border-collapse: collapse; width: 100%; font-size: 14px; }
 th, td { text-align: left; border: 1px solid var(--linie); padding: 5px 8px; }
 th { background: var(--blau-hell); }
+footer { margin-top: auto; }
 .fussleiste a { font-size: 11px; padding: 6px 9px; }
 .fuss { padding: 10px 14px; margin: 0; color: #555; font-size: 12px; }
 .prose { overflow-wrap: anywhere; }
