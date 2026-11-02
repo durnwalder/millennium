@@ -66,21 +66,8 @@ figure { margin: 0 0 1em; }
 figcaption { font-size: 13px; margin-top: 6px; }
 figcaption p { margin: 5px 0 0; }
 .platzhalter { display: grid; place-items: center; min-height: 140px; padding: 1em; border: 1px dashed #969696; background: var(--blau-hell); color: #555; font-size: 13px; text-align: center; }
-.baustelle { margin: 0 0 14px; background: #dcdcdc; border: 2px solid; border-color: #fff #969696 #969696 #fff; }
-.warnstreifen { height: 14px; background: repeating-linear-gradient(45deg, #1a1a1a 0 10px, #f5c518 10px 20px); background-size: 28.29px 28.29px; animation: warnlauf 1.2s linear infinite; }
-.baustelle-kern { display: flex; gap: 14px; align-items: center; padding: 14px 12px; }
-.baustelle-kern p { margin: 0 0 .6em; font-size: 14px; }
-.baustelle-kern p:last-child { margin-bottom: 0; }
-.schild { flex: none; width: 96px; height: 96px; }
-.pickel { transform-box: view-box; transform-origin: 59px 57px; animation: hacken .9s ease-in-out infinite alternate; }
-.blinkt { color: #a00; font: bold 19px/1.2 Arial, sans-serif; text-transform: uppercase; letter-spacing: .06em; animation: blinken 1.1s steps(1) infinite; }
-.laufband { overflow: hidden; margin: 0; padding: 5px 0; background: var(--navy); border-top: 1px solid #969696; color: #fff; font-size: 13px; }
-.laufband span { display: inline-block; padding-left: 100%; white-space: nowrap; animation: laufen 16s linear infinite; }
-.baustelle-fuss { color: #555; font-size: 12px; }
-@keyframes warnlauf { to { background-position: 28.29px 0; } }
-@keyframes hacken { from { transform: rotate(-32deg); } to { transform: rotate(6deg); } }
-@keyframes blinken { 50% { opacity: 0; } }
-@keyframes laufen { to { transform: translateX(-100%); } }
+.baustelle { margin: 0 0 14px; text-align: center; }
+.baustelle img { display: block; margin: 0 auto 10px; }
 .grosses-foto img { display: block; width: 100%; }
 blockquote { margin: 1em 0; padding: 8px 14px; border-left: 3px solid var(--blau); background: var(--blau-hell); }
 blockquote p:last-child { margin-bottom: 0; }
@@ -108,14 +95,4 @@ th { background: var(--blau-hell); }
   a { color: #000; }
   .fotoalbum { display: block; }
   figure { break-inside: avoid; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .warnstreifen, .pickel, .blinkt, .laufband span { animation: none; }
-  .laufband span { padding-left: 0; }
-}
-@media (max-width: 380px) { .baustelle-kern { flex-direction: column; text-align: center; } }
-@media print {
-  .warnstreifen, .laufband { display: none; }
-  .baustelle { background: #fff; border: 1px solid #000; }
-  .blinkt { color: #000; }
 }
