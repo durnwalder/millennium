@@ -25,7 +25,7 @@
         {% for item in config.extra.navigation %}<a href="{{ get_url(path=item.path) }}">{{ item.label }}</a>{% endfor %}
         <a href="{{ blog.permalink }}atom.xml">RSS / Atom</a>
       </nav>
-      <p class="fuss">{{ config.extra.footer }}</p>
+      {% if config.extra.footer %}<p class="fuss">{{ config.extra.footer }}</p>{% endif %}
     </footer>
     {% endblock footer %}
   </div>
