@@ -69,6 +69,7 @@ figcaption p { margin: 5px 0 0; }
 .baustelle { margin: 0 0 14px; text-align: center; }
 .baustelle img { display: block; margin: 0 auto; }
 .grosses-foto img { display: block; width: 100%; }
+.aufnahme { display: block; color: #555; }
 blockquote { margin: 1em 0; padding: 8px 14px; border-left: 3px solid var(--blau); background: var(--blau-hell); }
 blockquote p:last-child { margin-bottom: 0; }
 pre { overflow: auto; padding: 10px; background: #eee; border: 1px solid var(--linie); }
